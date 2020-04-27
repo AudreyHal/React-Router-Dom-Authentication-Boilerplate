@@ -5,15 +5,18 @@ import { PrivatePaths } from "../routes";
 
 const Login=()=>{
   let history = useHistory();
+
   const handleLogIn=()=>{
     Auth.setToken("exampleToken");
-    history.push(PrivatePaths.Dashboard)
+    history.push(PrivatePaths.Dashboard);
   }
-  return(<div>
-    <h1>Log In Page</h1>
-    <button onClick={handleLogIn}> LOG IN</button>
-  </div>)
 
+  return(
+    <div>
+      <h1>Log In Page</h1>
+      <button onClick={handleLogIn}> LOG IN</button>
+    </div>
+  )
 }
 
 export default Login

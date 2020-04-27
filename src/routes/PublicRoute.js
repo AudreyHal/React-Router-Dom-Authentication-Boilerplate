@@ -1,6 +1,5 @@
 import React from "react";
 import { Route, Redirect } from "react-router-dom";
-
 import Auth from "../utils/Auth";
 import { PrivatePaths } from "./index";
 
@@ -12,7 +11,7 @@ const PublicRoute = ({ component: Component, ...rest }) => {
         const content = Auth.isAuthenticated() ? (
           <Redirect
             to={{
-              pathname: PrivatePaths.Dashboard,
+              pathname: PrivatePaths.Dashboard, /* Path to redirect to once a user has been authorized */
               state: { from: props.location },
             }}
           />

@@ -18,11 +18,13 @@ export const PrivatePaths = {
   Dashboard: "/dashboard"
 };
 
-const publicRoutes = [
+const publicRoutes = [ 
+  /* Add paths for unauthorized users */
   { path: PublicPaths.LOGIN, exact: true, component: Login }
 ];
 
 const privateRoutes = [ 
+  /* Add paths for authorized users */
   { path: PrivatePaths.Dashboard, exact: true, component: Dashboard }
 ];
 

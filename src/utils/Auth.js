@@ -1,5 +1,5 @@
 export default class Auth {
-  static isAuthenticated() {
+  static isAuthenticated() { /* Checks if user is authenticated. Returns true if authentication token is present */
     const token = localStorage.getItem("token");
     return token ? true : false;
   }

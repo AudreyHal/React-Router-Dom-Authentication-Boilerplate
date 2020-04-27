@@ -13,7 +13,7 @@ const PrivateRoute = ({ component: Component, shouldRedirect, ...rest }) => {
         ) : shouldRedirect !== false ? (
           <Redirect
             to={{
-              pathname: PublicPaths.LOGIN,
+              pathname: PublicPaths.LOGIN,  /* Path to redirect to when an unauthorized user tries to access a protected route */
               state: { from: props.location }
             }}
           />

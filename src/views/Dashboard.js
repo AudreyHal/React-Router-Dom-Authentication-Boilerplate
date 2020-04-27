@@ -5,16 +5,18 @@ import { PublicPaths } from "../routes";
 
 const Dashboard=()=>{
   let history = useHistory();
+
   const handleLogOut=()=>{
     Auth.removeToken();
-    history.push(PublicPaths.LOGIN)
+    history.push(PublicPaths.LOGIN);
   }
 
-  return(<div>
-    <h1>Dashboard</h1>
-     <button onClick={handleLogOut}> LOG OUT</button>
-  </div>)
-
+  return(
+    <div>
+      <h1>Dashboard</h1>
+      <button onClick={handleLogOut}> LOG OUT</button>
+    </div>
+  )
 }
 
 export default Dashboard
